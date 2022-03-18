@@ -208,6 +208,7 @@ div#recentProjects{
     display: flex;
     justify-content: center;
     padding-bottom: 80px;
+    flex-wrap: wrap;
 }
 
 div#recentProjects .projectDesc{
