@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>iRepairWireless | Phone & Electronic repair</title>
+    <meta name="description" content="iRepairWireless Phone and Electronic repair">
+    <meta name="author" content="iRepairWireless">
+
+    <meta property="og:title" content="iRepairWireless | Phone & Electronic repair">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="iRepairWireless | Phone and Electronic repair">
+    <meta property="og:image" content="image.png">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" media="(max-width:1026px)" href="styles/mobileXL.css">
+    <link rel="stylesheet" media="(max-width:617px)" href="styles/mobile.css">
+    <script src="js/main.js"></script>
+
+    <script src="https://kit.fontawesome.com/4556812e68.js" crossorigin="anonymous"></script>
+</head>
+<body onload="tiktokFix();">
+    <header>
+        <img id="logoImg" src="assets/logo.png" alt="iRepairWireless Logo Image">
+        <nav>
+            <div id="navMenu" class="mobileWrap">
+                <a onclick="toggleMobileMenu('menuToggle')" class="mobileMenu" href="#"><i class="fa-solid fa-bars"></i>Menu</a>
+                <a class="navItem menuToggle" href="#">Our Services</a>
+                <a class="navItem menuToggle" href="#">Phone Cases</a>
+                <a class="navItem navLast menuToggle" href="#">Accessories</a>
+            </div>
+            <div class="mobileWrap navRight">
+                <a class="navBtn" href="#"><i class="fa-solid fa-phone mobileHide"></i>Contact<i class="fa-solid fa-phone mobileShow"></i></a>
+                <a class="navBtn quoteBtn navLast menuToggle" href="#"><span class="quoteLong">Get a </span>Quote<i class="fa-solid fa-calculator"></i></a>    
+            </div>
+        </nav>
+        <!-- <a id="logoPulldown">About Us ^</a> !-->
+    </header>
+    <section class="splitSection">
+        <div class="splitLeft">
+            <div class="splitHeading">
+                <h1>iRepairWireless Milwaukee</h1>
+                <h2>South Side MKE repair shop specializing in the repair of smart phones, tablets, gaming consoles and more! We carry a large variety of iPhone and Android cases in stock, as well as many other phone accessories!</h2>   
+            </div>
+            <div class="splitLinks">
+                <a href="" class="phoneLink">414-123-1234</a>
+                <a href="" class="phoneLink">Frequently Asked Questions</a>
+            </div>
+            <div class="bottomText">
+                <h2>Check out our recent projects or visit us in store!</h2>
+                <a class="locationLink"><i class="fa-solid fa-location-dot"></i>iRepairWireless</a>
+            </div>
+            <!-- <a><i class="fa-solid fa-location-dot"></i>Located inside Monterey Market at 3920 s 27th street, Milwaukee WI 53221</a> !-->
+        </div>
+        <div class="splitRight">
+            <img src="assets/headerImg.png">
+        </div>
+    </section>
+    <section class="mainSection">
+        <h1><span style="margin-right: 10px;"></span>Recent projects<span style="margin-left: 10px;"></span></h1>
+        <div id="recentProjects">
+            <div class="projectDesc">
+                <p>Customer came in with a broken HDMI port on their Ps5. The port was replaced and we got a happy customer</p>
+            </div>
+            <div class="projectImages">
+                <img class="bottomImg">
+                <img class="midImg">
+                <img class="topImg">
+            </div>
+        </div>
+        <div id="recentReviews">
+            <div class="reviewItem">
+                <p><span>"</span>Adolfo did a wonderful job repairing my broken Iphone screen<span>"</span></p>
+            </div>
+        </div>
+    </section>
+    <section class="mainSection">
+        <h1>FAQs</h1>
+        <p class="miniTitle">(Frequently Asked Questions)</p>
+        <ul class="faqList">
+            <li>Example question: Do you fix cracked iPhone screens?
+                <div class="faqAnswer">
+                    <span>Answer:</span>
+                    <br>
+                    <p>Yes we do, we have the best rates and prices!</p>
+                </div>
+            </li>
+            <li>Example question 2: How much will you charge me for X service on X phone
+                <div class="faqAnswer">
+                    <span>Answer:</span>
+                    <br>
+                    <p>X service on X phone varies from $XX to $XXX</p>
+                </div>
+            </li>
+            <li>Can I purchase spare parts?</li>
+            <li>Question 4: Blah blah blah blah</li>
+        </ul>
+    </section>
+    <footer>
+        <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ7drcvMQQBYgRbcUZT51dOOI&key=AIzaSyAyAKAejN-nMXPXQvT5I0SzrpdpdKUbCk4"></iframe>
+        <ul>
+            <li>iRepairWireless</li>
+            <li>3920 South 27th Street</li>
+            <li>Milwaukee, WI 53221</li>
+            <li>Located inside of Monterey Market</li>
+            <li class="hoursLi mobileHide">Hours:</li>
+            <li class="hoursLi">Monday-Friday: 9am-9pm</li>
+            <li class="hoursLi">Saturday: 10am-6pm</li>
+            <li class="hoursLi">Sunday: Closed</li>
+        </ul>
+        <div class="footerRight">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook-square"></i></i>iRepairWireless</a></li>
+                <li><a href="#"><i class="fa-solid fa-square-envelope"></i>iRepairWireless@gmail.com</a></li>
+                <li><a href="#"><i class="fa-solid fa-square-phone"></i>414-123-4567</a></li>
+            </ul>
+            <p>Copyright 2022 iRepairWireless</p>
+        </div>
+    </footer>
+    <!-- Futuristic BG Image by <a href="https://pixabay.com/users/sentientcollector-5259855/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2816457">SentientCollector</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2816457">Pixabay</a> !-->
+    <!-- Geometric BG Image by <a href="https://pixabay.com/users/sambeetarts-1339110/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Sambeet D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Pixabay</a>-->
+</body>
+</html>

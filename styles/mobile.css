@@ -1,0 +1,137 @@
+header a.mobileMenu{
+    display: inline-flex;
+    font-size: 24px;
+    background-color: transparent;
+}
+
+header a.mobileMenu i{
+    margin-right: 10px;
+}
+
+header a.mobileMenu:hover > i{
+    color: #3bfd0077;
+}
+
+header div.mobileWrap{
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 1 50%;
+    align-content: flex-start;
+    max-height: 70px;
+    overflow: hidden;
+}
+
+header div.mobileWrap.mobileSlide{
+    max-height: 255px;
+}
+
+header div.mobileWrap a{
+    -webkit-flex: 0 1 50%; /* Safari */
+    -ms-flex: 0 1 50%; /* IE 10 */
+    flex: 0 1 50%; /* Standard syntax */
+    border-right-width: 0px;
+}
+
+header nav{
+    margin-bottom: 0px;
+}
+
+header nav div.navRight{
+    margin-left: auto;
+}
+
+div.mobileWrap.navRight > a{
+    font-size: 24px;
+}
+
+header div.mobileWrap a:hover{
+    background-color: transparent;
+    color: #3bfd0077;
+}
+
+header nav a.navBtn{
+    border-right-width: 2px;
+    background-color: transparent;
+    font-size: 20px;
+    flex-basis: 80%;
+    border-right: 0px;
+    text-align: right;
+}
+
+header nav a.navBtn i.mobileShow{
+    display: inline;
+    margin-left: 15px;
+}
+header nav a.navBtn i.mobileHide{
+    display: none;
+}
+header div.mobileWrap a.navItem{
+    margin-left: 30px;
+    flex-basis: 50%;
+    border-left-width: 2px;
+    border-left-color: #3bfd0077;
+    text-align: left;
+    margin-top: -1px;
+}
+
+header nav a.navItem.navLast{
+    border-bottom-width: 2px;
+    border-bottom-color: #3bfd0077;
+}
+
+header nav a.quoteBtn{
+    display: inline-block;
+    margin-top: 0px;
+}
+
+header nav a.quoteBtn i{
+    margin-right: 10px;
+}
+
+header nav a.menuToggle{
+    opacity: 0;
+    transition: .5s opacity;
+}
+
+header nav a.toggleOn{
+    opacity: 1;
+}
+
+.splitLeft h1{
+    font-size: 34px;
+}
+
+.splitLeft h2, .splitLeft .bottomText a.locationLink{
+    font-size: 20px;
+}
+
+span.quoteLong{
+    display: inline;
+}
+
+footer{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer iframe{
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+footer ul li:first-child{
+    margin-top: 0px;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 49%;
+}
+
+footer .footerRight ul li{
+    min-width: 253px;
+    padding: 0px 0px 10px 0px;
+    font-size: 18px;
+}
