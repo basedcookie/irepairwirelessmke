@@ -1,3 +1,12 @@
+.mobileHide{
+    display: none;
+}
+
+.mobileShow{
+    display: inline;
+}
+/* Its obvious */
+
 header a.mobileMenu{
     display: inline-flex;
     font-size: 24px;
@@ -59,12 +68,11 @@ header nav a.navBtn{
 }
 
 header nav a.navBtn i.mobileShow{
-    display: inline;
     margin-left: 15px;
 }
-header nav a.navBtn i.mobileHide{
+/*header nav a.navBtn i.mobileHide{
     display: none;
-}
+}*/
 header div.mobileWrap a.navItem{
     margin-left: 30px;
     flex-basis: 50%;
@@ -97,6 +105,8 @@ header nav a.toggleOn{
     opacity: 1;
 }
 
+/* Main section styles */
+
 .splitLeft h1{
     font-size: 34px;
 }
@@ -108,6 +118,19 @@ header nav a.toggleOn{
 span.quoteLong{
     display: inline;
 }
+
+/* FAQ styles */
+
+section.mainSection ul.faqList li > p:hover{
+    cursor: pointer;
+}
+
+section.mainSection ul.faqList li.mobileSlideHide{
+    max-height: 23px;
+    overflow: hidden;
+}
+
+/* Footer Styles */
 
 footer{
     flex-direction: row;

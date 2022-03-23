@@ -1,3 +1,7 @@
+.mobileShow{
+    display: none;
+}
+
 /* Body and header styles */
 
 body{
@@ -75,9 +79,9 @@ header nav a.navBtn i{
     border: 1px solid #3bfd0077;*/
     margin-right: 10px;
 }
-header nav a.navBtn i.mobileShow{
+/*header nav a.navBtn i.mobileShow{
     display: none;
-}
+}*/
 
 header nav a.quoteBtn i{
     margin-left: 15px;
@@ -308,7 +312,7 @@ section.mainSection ul.faqList{
     list-style-type: none;
     display: block;
     margin: 0px auto;
-    max-width: 900px;
+    max-width: 800px;
     padding: 0px 30px;
     margin-top: 25px;
 }
@@ -316,18 +320,50 @@ section.mainSection ul.faqList{
 section.mainSection ul.faqList li{
     border-radius: 5px;
     border: 1px solid rgba(0,0,0, .8);
-    padding: 15px 10px;
+    padding: 15px 0px 15px 15px;
     text-align: left;
     margin: 15px 0px;
     background-color: rgba(0,0,0, .2);
+    max-height: 180px;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+
+section.mainSection ul.faqList li > p{
+    margin: 0px;
+    font-size: 20px;
+    padding-right: 15px;
+}
+
+section.mainSection ul.faqList li > p span{
+    float: right;
+    position: relative;
+}
+
+@keyframes jiggle {
+    0% {transform: translateY(-2px);}
+    50% {transform: translateY(2px);}
+    100% {transform: translateY(-2px);}
+}
+
+section.mainSection ul.faqList li.mobileSlideHide > p span{
+    animation-name: jiggle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 section.mainSection ul.faqList li .faqAnswer{
-    margin-top: 10px;
+    margin-left: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
 }
 
 section.mainSection ul.faqList li .faqAnswer p{
-    margin: 10px auto;
+    margin: 0px auto;
+    font-size: 16px;
 }
 
 /* Footer Styles */
