@@ -32,12 +32,11 @@
             <div id="navMenu" class="mobileWrap">
                 <a onclick="toggleMobileMenu('menuToggle')" class="mobileMenu" href="#"><i class="fa-solid fa-bars"></i>Menu</a>
                 <a class="navItem menuToggle" href="#">Our Services</a>
-                <a class="navItem menuToggle" href="#">Phone Cases</a>
-                <a class="navItem navLast menuToggle" href="#">Accessories</a>
+                <a class="navItem menuToggle navLast" href="#">Cases & Accessories</a>
             </div>
             <div class="mobileWrap navRight">
-                <a class="navBtn" href="#"><i class="fa-solid fa-phone mobileHide"></i>Contact<i class="fa-solid fa-phone mobileShow"></i></a>
-                <a class="navBtn quoteBtn navLast menuToggle" href="#"><span class="quoteLong">Get a </span>Quote<i class="fa-solid fa-calculator"></i></a>    
+                <a class="navBtn" href="#">Contact<i class="fa-solid fa-phone"></i></a>
+                <a class="navBtn quoteBtn menuToggle" href="#"><span class="quoteLong">Get a </span>Quote<i class="fa-solid fa-calculator"></i></a>    
             </div>
         </nav>
         <!-- <a id="logoPulldown">About Us ^</a> !-->
@@ -50,11 +49,10 @@
             </div>
             <div class="splitLinks">
                 <a href="" class="phoneLink">414-763-2556</a>
-                <a href="" class="phoneLink">Frequently Asked Questions</a>
+                <a href="#faqs" class="phoneLink">Frequently Asked Questions</a>
             </div>
             <div class="bottomText">
-                <h2>Check out our recent projects or visit us in store!</h2>
-                <a class="locationLink"><i class="fa-solid fa-location-dot"></i>iRepairWireless</a>
+                <h2>Check out our recent projects or visit us in store!<a href="" class="locationLink"><i class="fa-solid fa-location-dot"></i>iRepairWireless</a></h2>
             </div>
             <!-- <a><i class="fa-solid fa-location-dot"></i>Located inside Monterey Market at 3920 s 27th street, Milwaukee WI 53221</a> !-->
         </div>
@@ -62,17 +60,26 @@
             <img src="assets/headerImg.png">
         </div>
     </section>
+    <h1 class="sectionHeader"><span style="margin-right: 15px;"></span>Recently Repaired<span style="margin-left: 15px;"></span></h1>
     <section class="mainSection">
-        <h1><span style="margin-right: 10px;"></span>Recent projects<span style="margin-left: 10px;"></span></h1>
         <div id="recentProjects">
-            <div class="projectDesc">
+            <div class="imgWrapper">
+                <div class="projectImages">
+                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic1.jpg'); background-size: cover;" class="bottomImg">
+                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic2.jpg'); background-size: cover;" class="midImg">
+                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic3.jpg'); background-size: cover; background-position: 48%;" class="topImg">
+                </div>
+            </div>
+            <div class="imgWrapper">
+                <div class="projectImages">
+                    <img src="assets/site_images/1x1.png" class="bottomImg">
+                    <img src="assets/site_images/1x1.png" class="midImg">
+                    <img src="assets/site_images/1x1.png" class="topImg">
+                </div>
+            </div>
+            <!--<div class="projectDesc">
                 <p>Customer came in with a broken HDMI port on their Ps5. The port was replaced and we got a happy customer</p>
-            </div>
-            <div class="projectImages">
-                <img class="bottomImg">
-                <img class="midImg">
-                <img class="topImg">
-            </div>
+            </div>!-->
         </div>
         <div id="recentReviews">
             <div class="reviewItem">
@@ -80,7 +87,7 @@
             </div>
         </div>
     </section>
-    <section class="mainSection">
+    <section class="mainSection" id="faqs">
         <h1>FAQs</h1>
         <p class="miniTitle">(Frequently Asked Questions)</p>
         <ul class="faqList">
@@ -92,20 +99,26 @@
             </li>
             <li class="mobileSlideHide">
                 <p onclick="mobileSlideHide(this, 'faqAnswer')">Do you buy phones?<span class="mobileShow"><i class="fa-solid fa-angles-down"></i></span></p>
-                <div class="faqAnswer">
-                    <p>Yes depending on the model and condition, as well as damaged phones, locked or unlocked.</p>
+                <div class="faqAnswer_wrapper">
+                    <div class="faqAnswer">
+                        <p>Yes depending on the model and condition, as well as damaged phones, locked or unlocked.</p>
+                    </div>
                 </div>
             </li>
             <li class="mobileSlideHide">
                 <p onclick="mobileSlideHide(this, 'faqAnswer')">Do you only repair phones?<span class="mobileShow"><i class="fa-solid fa-angles-down"></i></span></p>
-                <div class="faqAnswer">
-                    <p>We repair many types of eletronics including: iPods, laptops, PCs, Xbox, Playstion, and Nintendo consoles.</p>
+                <div class="faqAnswer_wrapper">
+                    <div class="faqAnswer">
+                        <p>We repair many types of eletronics including: iPods, laptops, PCs, Xbox, Playstion, and Nintendo consoles.</p>
+                    </div>
                 </div>
             </li>
             <li class="mobileSlideHide">
                 <p onclick="mobileSlideHide(this, 'faqAnswer')">Do you fix software issues?<span class="mobileShow"><i class="fa-solid fa-angles-down"></i></span></p>
-                <div class="faqAnswer">
-                    <p>We do fix software issues with phones, consoles, laptops and PCs</p>
+                <div class="faqAnswer_wrapper">
+                    <div class="faqAnswer">
+                        <p>We do fix software issues with phones, consoles, laptops and PCs</p>
+                    </div>
                 </div>
             </li>
         </ul>
@@ -118,14 +131,14 @@
             <li>Milwaukee, WI 53221</li>
             <li>Located inside of Monterey Market</li>
             <li class="hoursLi mobileHide">Hours:</li>
-            <li class="hoursLi">Monday-Saturday: 11am-6pm</li>
+            <li class="hoursLi">Mon-Sat: 11am-6pm</li>
             <li class="hoursLi">Sunday: 12pm-5pm</li>
         </ul>
         <div class="footerRight">
             <ul>
                 <li><a href="#"><i class="fa-brands fa-facebook-square"></i></i>iRepairWireless</a></li>
-                <li><a href="#"><i class="fa-solid fa-square-envelope"></i>iRepairWireless96@gmail.com</a></li>
-                <li><a href="#"><i class="fa-solid fa-square-phone"></i>414-763-2556</a></li>
+                <li><a href="mailto:iRepairWireless96@gmail.com"><i class="fa-solid fa-square-envelope"></i>iRepairWireless96@gmail.com</a></li>
+                <li><a href="tel:+4147632556"><i class="fa-solid fa-square-phone"></i>414-763-2556</a></li>
             </ul>
             <p>Copyright 2022 iRepairWireless</p>
         </div>

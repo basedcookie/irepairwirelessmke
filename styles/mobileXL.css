@@ -38,11 +38,11 @@ span.quoteLong{
     margin: 0px auto;
 }
 
-section.mainSection h1 span{
+h1.sectionHeader span{
     display: none;
 }
 
-section.mainSection h1{
+h1.sectionHeader{
     border-bottom: 2px solid white;
     display: inline-block;
     padding: 0 60px 20px 60px;

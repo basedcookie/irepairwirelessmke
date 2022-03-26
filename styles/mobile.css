@@ -3,13 +3,13 @@
 }
 
 .mobileShow{
-    display: inline;
+    display: inline !important;
 }
 /* Its obvious */
 
 header a.mobileMenu{
     display: inline-flex;
-    font-size: 24px;
+    font-size: 22px;
     background-color: transparent;
 }
 
@@ -36,7 +36,7 @@ header div.mobileWrap.mobileSlide{
 
 header div.mobileWrap a{
     -webkit-flex: 0 1 50%; /* Safari */
-    -ms-flex: 0 1 50%; /* IE 10 */
+    -ms-flex: 0 1 65%; /* IE 10 */
     flex: 0 1 50%; /* Standard syntax */
     border-right-width: 0px;
 }
@@ -45,12 +45,10 @@ header nav{
     margin-bottom: 0px;
 }
 
-header nav div.navRight{
+header div.mobileWrap.navRight{
     margin-left: auto;
-}
-
-div.mobileWrap.navRight > a{
-    font-size: 24px;
+    flex-direction: row;
+    align-self: flex-start;
 }
 
 header div.mobileWrap a:hover{
@@ -61,7 +59,7 @@ header div.mobileWrap a:hover{
 header nav a.navBtn{
     border-right-width: 2px;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 22px;
     flex-basis: 80%;
     border-right: 0px;
     text-align: right;
@@ -70,21 +68,17 @@ header nav a.navBtn{
 header nav a.navBtn i.mobileShow{
     margin-left: 15px;
 }
-/*header nav a.navBtn i.mobileHide{
-    display: none;
-}*/
+
 header div.mobileWrap a.navItem{
     margin-left: 30px;
-    flex-basis: 50%;
-    border-left-width: 2px;
-    border-left-color: #3bfd0077;
+    flex-basis: 65%;
+    border-left: 2px solid #3bfd0077;
     text-align: left;
     margin-top: -1px;
 }
 
 header nav a.navItem.navLast{
-    border-bottom-width: 2px;
-    border-bottom-color: #3bfd0077;
+    border-bottom: 2px solid #3bfd0077;
 }
 
 header nav a.quoteBtn{
@@ -93,7 +87,7 @@ header nav a.quoteBtn{
 }
 
 header nav a.quoteBtn i{
-    margin-right: 10px;
+    /*margin-right: 10px;*/
 }
 
 header nav a.menuToggle{
@@ -115,8 +109,34 @@ header nav a.toggleOn{
     font-size: 20px;
 }
 
+.splitRight{
+    flex: 1 0 0;
+}
+
+.splitRight img{
+    min-width: 250px;
+}
+
 span.quoteLong{
     display: inline;
+}
+
+/* Recent Projects Styles */
+div#recentProjects .imgWrapper:last-child{
+    margin-left: 0px;
+}
+
+div#recentProjects .imgWrapper{
+    padding: 0px;
+    text-align: center;
+}
+
+div#recentProjects .projectImages{
+    margin: 0px auto;
+}
+
+div#recentProjects .projectImages img.midImg, div#recentProjects .projectImages img.topImg{
+    left: 0px;
 }
 
 /* FAQ styles */
@@ -126,8 +146,26 @@ section.mainSection ul.faqList li > p:hover{
 }
 
 section.mainSection ul.faqList li.mobileSlideHide{
-    max-height: 23px;
+    max-height: min-content;
     overflow: hidden;
+}
+
+section.mainSection ul.faqList li.mobileSlideHide .faqAnswer_wrapper{
+    max-height: 0px;
+    overflow: hidden;
+}
+
+section.mainSection ul.faqList .faqAnswer_wrapper{
+    max-height: 200px;
+    transition: max-height 1s;
+}
+
+section.mainSection h1{
+    font-size: 40px;
+}
+
+section.mainSection ul.faqList li .faqAnswer{
+    margin-left: 0px;
 }
 
 /* Footer Styles */
