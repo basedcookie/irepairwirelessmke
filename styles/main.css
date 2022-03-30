@@ -109,8 +109,8 @@ header nav a.navBtn:hover{
 
 section{
     background-color: rgba(0, 0, 0, .2);
-    padding: 20px 15px;
-    margin: 30px 0px;
+    padding: 15px 5px;
+    margin: 0px;
     color: wheat;
 }
 
@@ -128,7 +128,7 @@ section.splitSection{
 
 .splitLeft{
     text-align: left;
-    padding: 15px 15px 0px 15px;
+    padding: 15px;
     display: inline-flex;
     flex-direction: column;
     flex: 2 0 260px;
@@ -167,19 +167,30 @@ section.splitSection{
 
 .splitLeft .bottomText h2{
     margin-right: 20px;
-    margin-bottom: 10px;
     display: inline-block;
+    margin-bottom: 0px;
+    line-height: 42px;
 }
 
 .splitLeft .bottomText a.locationLink{
-    display: inline;
-    font-size: 1em;
-    margin-left: 15px;
+    line-height: 42px;
+    padding: 0px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    color: black;
+    background: rgb(125,250,255);
+    background: linear-gradient(
+        0deg,
+        rgba(17,99,227,1) 25%,
+        rgba(17,197,161,1) 50%,
+        rgba(17,99,227,1) 75%
+    );
 }
 
 .splitLeft .bottomText a.locationLink i{
     white-space: nowrap;
-    margin-right: 5px;
+    margin-right: 8px;
     color: rgb(187, 30, 30);
     animation-name: jiggle-quick;
     animation-duration: 1s;
@@ -188,7 +199,7 @@ section.splitSection{
 
 .splitRight{
     flex: 1 0 303px;
-    padding: 15px 15px 0px 15px;
+    padding: 15px;
 }
 
 .splitRight img{
@@ -209,9 +220,16 @@ section.splitSection{
 }*/
 
 h1.sectionHeader{
+    padding: 30px 15px;
+    margin: 0px;
     font-size: 38px;
     color: wheat;
-    margin: 30px auto;
+    background: linear-gradient(
+        0deg, 
+        rgba(17,99,227,.3) 25%,
+        rgba(17,197,161,.3) 50%,
+        rgba(17,99,227,.3) 75%
+    );
 }
 
 h1.sectionHeader span{
@@ -334,8 +352,19 @@ section.mainSection .showcase .shItem p{
 
 /* FAQs Styles */
 
-section.mainSection p.miniTitle{
+p.miniTitle{
     margin-top: 0px;
+    color: wheat;
+}
+
+h1.sectionHeader.sh_faqs{
+    
+}
+
+h1.sectionHeader.sh_faqs p{
+    display: block;
+    margin: 0px;
+    font-size: 18px;
 }
 
 section.mainSection ul.faqList{
@@ -395,7 +424,7 @@ section.mainSection ul.faqList li .faqAnswer p{
 footer{
     background-color: rgba(0, 0, 0, .4);
     margin-top: 30px;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     color: white;
     display: flex;
 }
@@ -405,10 +434,10 @@ footer iframe{
     height: 230px;
     display: inline-block;
     border: 0;
+    margin-bottom: 20px;
 }
 
 footer ul{
-    align-items: flex-start;
     list-style-type: none;
     text-align: left;
     font-size: 18px;
@@ -419,7 +448,7 @@ footer ul{
 footer ul li{
     margin-top: 10px;
 }
-footer ul li:first-child{
+footer > ul li:first-child{
     margin-top: 5px;
 }
 
@@ -441,6 +470,10 @@ footer .footerRight ul li{
     font-size: 20px;
 }
 
+footer .footerRight ul li:first-child{
+    margin-top: 0px;
+}
+
 footer .footerRight i{
     margin-right: 15px;
     color: #3bfd0077;
@@ -453,9 +486,10 @@ footer .footerRight a:hover{
 
 footer .footerRight p{
     position: absolute;
-    bottom: 0px;
-    right: 20px;
+    bottom: 10px;
+    right: 0px;
     font-size: 13px;
+    margin: 10px 0px;
 }
 
 @media(max-width: 1106px){

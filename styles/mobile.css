@@ -191,6 +191,17 @@ footer ul{
     width: 49%;
 }
 
+footer .footerRight{
+    margin-left: 0px;
+    width: 100%;
+}
+
+footer .footerRight ul{
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
 footer .footerRight ul li{
     min-width: 253px;
     padding: 0px 0px 10px 0px;
