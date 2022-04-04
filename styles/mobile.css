@@ -121,6 +121,13 @@ span.quoteLong{
     display: inline;
 }
 
+/* Our Services Styles */
+
+#our_services div.sectionWrapper div.servicesItem i {
+    font-size: 80px;
+    min-width: 115px;
+}
+
 /* Recent Projects Styles */
 div#recentProjects .imgWrapper:last-child{
     margin-left: 0px;
