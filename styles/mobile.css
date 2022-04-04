@@ -142,7 +142,11 @@ div#recentProjects .projectImages img.midImg, div#recentProjects .projectImages 
 }
 
 div#recentProjects .projectDescription {
-    margin: 0px 30px;
+    margin: 15px 30px 30px 30px;
+}
+
+div#recentProjects .projectDescription #recentReviews{
+    padding-bottom: 0px;
 }
 
 /* FAQ styles */

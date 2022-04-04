@@ -7,6 +7,10 @@
     display: none !important;
 }
 
+.tabletShow{
+    display: none !important;
+}
+
 @keyframes jiggle {
     0% {transform: translateY(-2px);}
     50% {transform: translateY(2px);}
@@ -22,7 +26,7 @@
 /* Body and header styles */
 
 body{
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Source code pro', sans-serif;
     /* background-image: url("../assets/bgtile.png");*/
     background-color: #192649;
     margin: 0px;
@@ -258,6 +262,42 @@ h1.sectionHeader span{
     display: inline-block;
     vertical-align: middle;
     border-top: 1px solid white;
+}
+
+/* Our Services Section */
+
+#our_services div.sectionWrapper{
+    margin: 0px auto;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#our_services div.sectionWrapper div.servicesItem{
+    width: 100%;
+    text-align: left;
+    margin: 15px auto;
+}
+
+#our_services div.sectionWrapper div.servicesItem:not(:first-child):not(:last-child){
+    margin: 25px auto;
+}
+
+#our_services div.sectionWrapper div.servicesItem i{
+    margin-right: 20px;
+    font-size: 100px;
+    min-width: 135px;
+    text-align: center;
+    vertical-align: text-top;
+}
+
+#our_services div.sectionWrapper div.servicesItem .servicesDesc{
+    display: inline-block;
+}
+
+#our_services div.sectionWrapper div.servicesItem .servicesDesc h2{
+    margin: 0px;
 }
 
 div#recentProjects{

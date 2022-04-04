@@ -1,3 +1,11 @@
+.tabletHide{
+    display: none !important;
+}
+
+.tabletShow{
+    display: initial !important;
+}
+
 #logoImg{
     flex: 0 1 100%;
     align-self: center;
@@ -36,6 +44,10 @@ span.quoteLong{
 
 .splitRight img{
     margin: 0px auto;
+}
+
+.splitLeft .splitLinks a{
+    flex-basis: 80px;
 }
 
 h1.sectionHeader span{
