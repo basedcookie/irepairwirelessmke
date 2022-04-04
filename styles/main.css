@@ -290,6 +290,15 @@ h1.sectionHeader span{
     min-width: 135px;
     text-align: center;
     vertical-align: top;
+    background: linear-gradient(
+        0deg, 
+        rgba(17,99,227,1) 25%,
+        rgba(17,197,161,1) 50%,
+        rgba(17,99,227,1) 75%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #our_services div.sectionWrapper div.servicesItem .servicesDesc{
