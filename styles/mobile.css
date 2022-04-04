@@ -127,16 +127,22 @@ div#recentProjects .imgWrapper:last-child{
 }
 
 div#recentProjects .imgWrapper{
-    
+    height: 500px;
+    min-width: 310px;
     text-align: center;
 }
 
 div#recentProjects .projectImages{
     margin: 0px auto;
+    width: 98%;
 }
 
 div#recentProjects .projectImages img.midImg, div#recentProjects .projectImages img.topImg{
     left: 0px;
+}
+
+div#recentProjects .projectDescription {
+    margin: 0px 30px;
 }
 
 /* FAQ styles */

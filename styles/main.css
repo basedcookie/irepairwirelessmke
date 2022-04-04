@@ -202,26 +202,20 @@ section.splitSection{
 .splitLeft .bottomText a.locationLink{
     line-height: 42px;
     padding: 0px 15px;
-    border: 2px solid black;
-    border-radius: 5px;
     display: inline-block;
-    color: black;
-    background: rgb(125,250,255);
-    background: linear-gradient(
-        0deg,
-        rgba(17,99,227,1) 25%,
-        rgba(17,197,161,1) 50%,
-        rgba(17,99,227,1) 75%
-    );
+    color: #3bfd0077;
+}
+
+.splitLeft .bottomText a.locationLink:hover i{
+    animation-name: jiggle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
 .splitLeft .bottomText a.locationLink i{
     white-space: nowrap;
     margin-right: 8px;
     color: rgb(187, 30, 30);
-    animation-name: jiggle-quick;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
 }
 
 .splitRight{
