@@ -58,19 +58,48 @@ h1.sectionHeader{
     
 }
 
+/* Our services section */
+
+#our_services div.sectionWrapper{
+    flex-direction: column;
+}
+
+#our_services div.sectionWrapper div.servicesItem{
+    text-align: center !important;
+}
+
+#our_services div.sectionWrapper div.servicesItem h2{
+    text-align: left;
+}
+
+#our_services div.sectionWrapper div.servicesItem .servicesDesc{
+    display: inline-block !important;
+    width: min-content;
+    min-width: 265px;
+}
+
+#our_services div.sectionWrapper div.servicesItem:nth-child(even) i{
+    margin-left: 0px;
+    float: none;
+}
+
+#our_services div.sectionWrapper div.servicesItem ul{
+    min-width: max-content;
+    padding: 0px 0px 0px 25px !important;
+    direction: initial !important;
+}
+
+#our_services div.sectionWrapper div.servicesItem ul li{
+    text-align: left !important;
+}
+
+/* Faqs section */
+
 h1.sectionHeader.sh_faqs{
     border-bottom: none;
 }
 
-section.mainSection .showcase{
-    flex-direction: column;
-    align-content: flex-start;
-}
-
-section.mainSection .showcase .shItem, section.mainSection .showcase .shItem.middle{
-    flex-grow: 1;
-    width: 95%;
-}
+/* Footer section */
 
 footer iframe{
     width: 200px;

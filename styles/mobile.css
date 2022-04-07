@@ -9,7 +9,7 @@
 
 header a.mobileMenu{
     display: inline-flex;
-    font-size: 22px;
+    font-size: 20px;
     background-color: transparent;
 }
 
@@ -26,7 +26,7 @@ header div.mobileWrap{
     flex-wrap: wrap;
     flex: 0 1 50%;
     align-content: flex-start;
-    max-height: 70px;
+    max-height: 45px;
     overflow: hidden;
 }
 
@@ -34,12 +34,12 @@ header div.mobileWrap.mobileSlide{
     max-height: 255px;
 }
 
-header div.mobileWrap a{
-    -webkit-flex: 0 1 50%; /* Safari */
-    -ms-flex: 0 1 65%; /* IE 10 */
-    flex: 0 1 50%; /* Standard syntax */
+/*header div.mobileWrap a{
+    -webkit-flex: 0 1 50%; /* Safari 
+    -ms-flex: 0 1 65%; /* IE 10 
+    flex: 0 1 50%; /* Standard syntax 
     border-right-width: 0px;
-}
+}*/
 
 header nav{
     margin-bottom: 0px;
@@ -56,10 +56,18 @@ header div.mobileWrap a:hover{
     color: #3bfd0077;
 }
 
+header div.mobileWrap a{
+    padding: 10px 10px;
+}
+
+header nav a i{
+    font-size: 20px;
+}
+
 header nav a.navBtn{
     border-right-width: 2px;
     background-color: transparent;
-    font-size: 22px;
+    font-size: 18px;
     flex-basis: 80%;
     border-right: 0px;
     text-align: right;
@@ -102,7 +110,7 @@ header nav a.toggleOn{
 /* Main section styles */
 
 .splitLeft h1{
-    font-size: 34px;
+    font-size: 30px;
 }
 
 .splitLeft h2, .splitLeft .bottomText a.locationLink{
@@ -124,8 +132,21 @@ span.quoteLong{
 /* Our Services Styles */
 
 #our_services div.sectionWrapper div.servicesItem i {
+    margin-right: 0px;
     font-size: 80px;
     min-width: 115px;
+}
+
+#our_services div.sectionWrapper div.servicesItem h2{
+    text-align: center;
+}
+
+#our_services div.sectionWrapper div.servicesItem ul{
+    min-width: fit-content;
+}
+
+#our_services div.sectionWrapper div.servicesItem ul li{
+    min-width: fit-content;
 }
 
 /* Recent Projects Styles */
@@ -148,11 +169,16 @@ div#recentProjects .projectImages img.midImg, div#recentProjects .projectImages 
     left: 0px;
 }
 
+div#recentProjects .projectDescription h2 {
+    font-size: 20px;
+}
+
 div#recentProjects .projectDescription {
-    margin: 15px 30px 30px 30px;
+    margin: 15px 15px 30px 15px;
 }
 
 div#recentProjects .projectDescription #recentReviews{
+    margin-top: 30px;
     padding-bottom: 0px;
 }
 

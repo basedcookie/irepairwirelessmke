@@ -270,18 +270,18 @@ h1.sectionHeader span{
     margin: 0px auto;
     max-width: 1200px;
     display: flex;
-    flex-flow: column;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 #our_services div.sectionWrapper div.servicesItem{
-    width: 100%;
+    margin: 25px 0px;
+    flex: 1 1 50%;
+    min-width: 280px;
     text-align: left;
-    margin: 15px auto;
 }
 
-#our_services div.sectionWrapper div.servicesItem:not(:first-child):not(:last-child){
-    margin: 25px auto;
+#our_services div.sectionWrapper div.servicesItem:nth-child(even){
+    text-align: right;
 }
 
 #our_services div.sectionWrapper div.servicesItem i{
@@ -296,18 +296,71 @@ h1.sectionHeader span{
         rgba(17,197,161,1) 50%,
         rgba(17,99,227,1) 75%
     );
+    background-attachment: fixed;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#our_services div.sectionWrapper div.servicesItem:nth-child(even) i{
+    height: 100%;
+    float: right;
+    margin-left: 20px;
 }
 
 #our_services div.sectionWrapper div.servicesItem .servicesDesc{
     display: inline-block;
 }
 
+#our_services div.sectionWrapper div.servicesItem:nth-child(even) .servicesDesc{
+    display: block;
+}
+
 #our_services div.sectionWrapper div.servicesItem .servicesDesc h2{
     margin: 0px;
 }
+
+#our_services div.sectionWrapper div.servicesItem ul{
+    padding-left: 25px;
+    list-style-type:circle;
+}
+
+#our_services div.sectionWrapper div.servicesItem ul li{
+    padding-bottom: 5px;
+    min-width: max-content;
+}
+
+#our_services div.sectionWrapper div.servicesItem:nth-child(even) ul{
+    /* This is the icon width + margin and padding (175px) + list padding */
+    padding: 0px 200px 0px 0px;
+    direction: rtl;
+}
+
+#our_services div.sectionWrapper div.servicesItem:nth-child(even) ul li{
+    text-align: right;
+}
+
+#our_services div.servicesImg{
+    margin: 0px auto 25px auto;
+    width: 100%;
+    height: 300px;
+    max-width: 1100px;
+    background-image: url("../assets/repairBench.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 5px;
+}
+
+#our_services div.servicesImg h2{
+    text-shadow: 2px 2px 2px black;
+}
+
+#our_services div.servicesImg img{
+    opacity: 0;
+}
+
+/* Recent Projects secion */
 
 div#recentProjects{
     padding: 30px 15px 0px 15px;
@@ -388,6 +441,36 @@ div#recentProjects .projectDescription h2 span{
     min-width: 120px;
     max-width: 120px;
     float: left;
+}
+
+div#recentProjects .projectDescription > p{
+    margin: 25px 0px 0px 0px;
+    font-size: 18px;
+}
+
+div#recentProjects .projectDescription .tikTokRef{
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+div#recentProjects .projectDescription .tikTokRef:hover{
+    color: #3bfd0077;
+}
+
+div#recentProjects .projectDescription .tikTokRef i{
+    margin-right: 10px;
+    font-size: 22px;
+    background: linear-gradient(
+        0deg, 
+        rgba(17,99,227,1) 25%,
+        rgba(17,197,161,1) 50%,
+        rgba(17,99,227,1) 75%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 div#recentProjects .projectDescription #recentReviews{
