@@ -137,8 +137,10 @@ span.quoteLong{
     min-width: 115px;
 }
 
-#our_services div.sectionWrapper div.servicesItem h2{
-    text-align: center;
+@media(max-width: 400px){
+    #our_services div.sectionWrapper div.servicesItem h2{
+        text-align: center;
+    }
 }
 
 #our_services div.sectionWrapper div.servicesItem ul{
