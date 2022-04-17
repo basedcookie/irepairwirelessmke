@@ -344,13 +344,15 @@ h1.sectionHeader span{
     margin: 0px auto 25px auto;
     width: 100%;
     height: 300px;
-    max-width: 1100px;
+    max-width: 965px;
     background-image: url("../assets/repairBench.png");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    background-size: contain;
     border-radius: 5px;
     text-align: left;
+    overflow: hidden;
 }
 
 #our_services div.servicesImg h2{
@@ -367,6 +369,21 @@ h1.sectionHeader span{
 
 #our_services div.servicesImg img{
     opacity: 0;
+}
+
+#cases{
+    
+}
+
+#cases h3{
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #192649;
+    max-width: 945px;
+}
+
+#cases h3 i{
+    margin-left: 10px;
 }
 
 /* Recent Projects secion */
@@ -506,45 +523,6 @@ div#recentProjects .projectDescription #recentReviews .reviewItem p i{
     display: inline;
 }
 
-/*
-section.mainSection .showcase{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section.mainSection .showcase .shItem{
-    background-image: url(../assets/repairBench.png);
-    background-size: cover;
-    height: 380px;
-    opacity: .5;
-    flex: 1 0 auto;
-    border: 2px outset white;
-    margin: 10px 20px;
-    position: relative;
-}
-
-section.mainSection .showcase .shItem.middle{
-    flex: 1.5 0 auto;
-    height: 460px;
-    opacity: 1;
-}
-
-section.mainSection .showcase .shItem img{
-    width: 250px;
-    height: auto
-}
-
-section.mainSection .showcase .shItem p{
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-    margin: 0px auto;
-    padding: 20px 0px;
-    background-color: rgba(0, 0, 0, .8);
-}
-*/
-
 /* FAQs Styles */
 
 p.miniTitle{
@@ -612,6 +590,82 @@ section.mainSection ul.faqList li .faqAnswer{
 section.mainSection ul.faqList li .faqAnswer p{
     margin: 0px auto;
     font-size: 16px;
+}
+
+/* Contact us styles */
+
+h1.sectionHeader .btnContainer{
+    border: 2px solid black;
+    display: inline-block;
+}
+
+h1.sectionHeader a{
+    padding: 8px;
+    position: relative;
+    background-color: rebeccapurple;
+    z-index: 1;
+    display: inline-block;
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -ms-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+}
+
+/*
+h1.sectionHeader a:first-child:after{
+    position: absolute;
+	z-index: -1;
+    content: "";
+    right: -15px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-right: 2px solid black;
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -ms-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+}
+*/
+
+h1.sectionHeader a#quote_btn{
+    padding-left: 35px;
+    z-index: 0;
+}
+
+#contact_us form{
+    margin: 0px auto;
+    max-width: 800px;
+    font-size: 20px;
+}
+
+#contact_us form fieldset{
+    display: inline-block;
+    text-align: left;
+    border: none;
+}
+
+#contact_us form .fieldRow{
+    padding: 8px 0px;
+}
+
+#contact_us form .fieldRow label{
+    display: inline-block;
+    min-width: 125px;
+    text-align: left;
+}
+
+#contact_us form .fieldRow input, #contact_us form .fieldRow textarea{
+    border: 1px solid rgba(0,0,0, .8);
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    color: wheat;
+}
+
+#contact_us form .fieldRow textarea{
+    margin-top: 10px;
+    width: 100%;
+    resize: none;
 }
 
 /* Footer Styles */

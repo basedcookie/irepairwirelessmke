@@ -107,7 +107,7 @@ footer iframe{
 }
 
 footer ul{
-    /*font-size: 16px;*/
+    font-size: 16px;
     padding-left: 10px;
 }
 
@@ -121,7 +121,7 @@ footer ul li:first-child{
 
 footer .footerRight ul li{
     font-size: 16px;
-    min-width: 245px;
+    min-width: 200px;
     padding: 0px 0px 20px 15px;
 }
 

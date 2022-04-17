@@ -60,7 +60,7 @@
             <img src="assets/headerImg.png">
         </div>
     </section>
-    <h1 id="our_services" class="sectionHeader sh_faqs"><span style="margin-right: 15px;"></span>Our Services<span style="margin-left: 15px;"></span></h1>
+    <h1 id="our_services" class="sectionHeader"><span style="margin-right: 15px;"></span>Our Services<span style="margin-left: 15px;"></span></h1>
     <section id="our_services" class="mainSection">
         <div class="sectionWrapper">
             <div class="servicesItem">
@@ -116,15 +116,18 @@
             <h2>Where the magic happens!</h2>
             <img alt="Repair Bench Picture">
         </div>
+        <div id="cases" class="cases_accessories">
+            <h3>Check out our phone cases and accessories<i class="fa-solid fa-angle-down"></i></h2>
+        </div>
     </section>
     <h1 class="sectionHeader"><span style="margin-right: 15px;"></span>Recently Repaired<span style="margin-left: 15px;"></span></h1>
     <section class="mainSection">
         <div id="recentProjects">
             <div class="imgWrapper">
                 <div class="projectImages">
-                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic1.jpg'); background-size: cover;" class="bottomImg">
-                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic2.jpg'); background-size: cover;" class="midImg">
-                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic3.jpg'); background-size: cover; background-position: 48%;" class="topImg">
+                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic3_scale.jpg'); background-size: cover;" class="bottomImg">
+                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic2_scale.jpg'); background-size: cover;" class="midImg">
+                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic1_scale.jpg'); background-size: cover; background-position: 48%;" class="topImg">
                 </div>
             </div>
             <div class="projectDescription">
@@ -166,7 +169,7 @@
                 <p onclick="mobileSlideHide(this, 'faqAnswer')">Do you only repair phones?<span class="mobileShow"><i class="fa-solid fa-angles-down"></i></span></p>
                 <div class="faqAnswer_wrapper">
                     <div class="faqAnswer">
-                        <p>We repair many types of eletronics including: iPods, laptops, PCs, Xbox, Playstion, and Nintendo consoles.</p>
+                        <p>We repair many types of electronics including: iPods, laptops, PCs, Xbox, Playstion, and Nintendo consoles.</p>
                     </div>
                 </div>
             </li>
@@ -180,13 +183,37 @@
             </li>
         </ul>
     </section>
+    <h1 class="sectionHeader"><div class="btnContainer"><a id="contact_btn">Contact</a><a id="quote_btn">Quote</a></div></h1>
+    <section id="contact_us" class="mainSection">
+        <form>
+            <fieldset>
+                <div class="fieldRow">
+                    <label for="fName">Full Name</label>
+                    <input id="fName" name="name" type="text">
+                </div>
+                <div class="fieldRow">
+                    <label for="email">Email</label>
+                    <input name="email" type="email">
+                </div>
+                <div class="fieldRow">
+                    <label for="phone">Phone #</label>
+                    <input name="tel" type="tel">
+                </div>
+                <div class="fieldRow">
+                    <label for="comments">Comments</label>
+                    <br/>
+                    <textarea name="comments" rows="5" re></textarea>
+                </div>
+            </fieldset>
+        </form>
+    </section>
     <footer>
         <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ7drcvMQQBYgRbcUZT51dOOI&key=AIzaSyAyAKAejN-nMXPXQvT5I0SzrpdpdKUbCk4"></iframe>
         <ul>
             <li>iRepairWireless</li>
             <li>3920 South 27th Street</li>
             <li>Milwaukee, WI 53221</li>
-            <li>Located inside of Monterey Market</li>
+            <li>Inside of Monterey Market</li>
             <li class="hoursLi mobileHide">Hours:</li>
             <li class="hoursLi">Mon-Sat: 11am-6pm</li>
             <li class="hoursLi">Sunday: 12pm-5pm</li>
@@ -194,7 +221,7 @@
         <div class="footerRight">
             <ul>
                 <li><a href="#"><i class="fa-brands fa-facebook-square"></i></i>iRepairWireless</a></li>
-                <li><a href="mailto:iRepairWireless96@gmail.com"><i class="fa-solid fa-square-envelope"></i>iRepairWireless96@gmail.com</a></li>
+                <li><a href="mailto:iRepairWireless96@gmail.com"><i class="fa-solid fa-square-envelope"></i>iRepairWireless96&#8203;@gmail.com</a></li>
                 <li><a href="tel:+14147632556"><i class="fa-solid fa-square-phone"></i>414-763-2556</a></li>
             </ul>
             <p>Copyright 2022 iRepairWireless</p>
