@@ -213,6 +213,18 @@ section.mainSection ul.faqList li .faqAnswer{
     margin-left: 0px;
 }
 
+/* Contact Us Styles */
+
+h1.sectionHeader a{
+    min-width: 110px;
+    font-size: 22px;
+}
+
+#contact_form  .fieldRow.quoteFields select{
+    position: initial;
+    display: block;
+}
+
 /* Footer Styles */
 
 footer{

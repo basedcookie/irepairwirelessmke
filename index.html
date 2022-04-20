@@ -35,7 +35,7 @@
                 <a class="navItem menuToggle navLast" href="#">Cases & Accessories</a>
             </div>
             <div class="mobileWrap navRight">
-                <a class="navBtn" href="#">Contact<i class="fa-solid fa-phone"></i></a>
+                <a class="navBtn" href="#contact_us">Contact<i class="fa-solid fa-phone"></i></a>
                 <a class="navBtn quoteBtn menuToggle" href="#"><span class="quoteLong">Get a </span>Quote<i class="fa-solid fa-calculator"></i></a>    
             </div>
         </nav>
@@ -183,9 +183,9 @@
             </li>
         </ul>
     </section>
-    <h1 class="sectionHeader"><div class="btnContainer"><a id="contact_btn">Contact</a><a id="quote_btn">Quote</a></div></h1>
-    <section id="contact_us" class="mainSection">
-        <form>
+    <h1 id="contact_us" class="sectionHeader"><div class="btnContainer"><a class="btnSelected" id="contact_btn" onclick="toggleForm(this, 'contact')">Contact</a><a id="quote_btn" onclick="toggleForm(this, 'quote')">Quote</a></div></h1>
+    <section class="mainSection">
+        <form id="contact_form">
             <fieldset>
                 <div class="fieldRow">
                     <label for="fName">Full Name</label>
@@ -199,11 +199,53 @@
                     <label for="phone">Phone #</label>
                     <input name="tel" type="tel">
                 </div>
+                <fieldset id="quote_form" class="formDisabled" disabled>
+                    <div class="fieldRow quoteFields">
+                        <label for="device_type">Device type</label>
+                        <select name="device_type" title="Device Type">
+                            <optgroup label="Mobile Phone">
+                                <option value="android_phone">Android</option>
+                                <option value="iphone">Iphone</option>
+                                <option value="other_phone">Other - Phone</option>
+                            </optgroup>
+                            <optgroup label="Tablet">
+                                <option value="android_tablet">Android</option>
+                                <option value="ipad">iPad</option>
+                                <option value="other_tablet">Other - Tablet</option>
+                            </optgroup>
+                            <optgroup label="Game Console">
+                                <option value="xbox_series_x">Xbox Series X</option>
+                                <option value="xbox_360">Xbox 360</option>
+                                <option value="ps5">Playstation 5</option>
+                                <option value="ps4">Playstation 4</option>
+                                <option value="ps4">Playstation 3</option>
+                                <option value="nintendo_switch">Nintendo Switch</option>
+                                <option value="other_console">Other - Console</option>
+                            </optgroup>
+                            <optgroup label="Computer">
+                                <option value="laptop">Laptop</option>
+                                <option value="desktop_pc">Desktop PC</option>
+                            </optgroup>
+                            <option value="other_device">Other Device</option>
+                        </select>
+                        <br class="mobileHide">
+                        <label for="device_issue">Issue</label>
+                        <select name="device_issue" title="Device Issue">
+                            <option value="broken_glass">Broken Screen/Glass</option>
+                            <option value="battery_issue">Battery Issue</option>
+                            <option value="charging_issue">Charging Issue</option>
+                            <option value="device_overheating">Device overheating</option>
+                            <option value="no_power">Device not powering on</option>
+                            <option value="other_issue">Other issue</option>
+                        </select>
+                    </div>
+                </fieldset>
                 <div class="fieldRow">
                     <label for="comments">Comments</label>
-                    <br/>
-                    <textarea name="comments" rows="5" re></textarea>
+                    <br>
+                    <textarea name="comments" rows="5" placeholder="Questions, comments, concerns..."></textarea>
                 </div>
+                <button>Submit<i class="fa-solid fa-angle-right"></i></button>
             </fieldset>
         </form>
     </section>

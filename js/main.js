@@ -13,3 +13,19 @@ function toggleMobileMenu(className)
 const mobileSlideHide = (e, className) => {
     e.parentElement.classList.toggle("mobileSlideHide");
 }
+
+const toggleForm = (e, formToggle) => {
+    if(e.classList.contains('btnSelected')) return false;
+
+    let btnToggle = {'contact': 'quote_btn', 'quote': 'contact_btn'};
+    document.getElementById(btnToggle[formToggle]).classList.toggle('btnSelected');
+    e.classList.toggle('btnSelected');
+
+    let quoteFields = document.getElementById('quote_form');
+    quoteFields.classList.toggle('formDisabled');
+    if(formToggle == 'quote'){
+        quoteFields.disabled = false;
+    } else{
+        quoteFields.disabled = true;
+    }
+}

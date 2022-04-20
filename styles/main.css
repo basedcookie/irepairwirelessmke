@@ -595,20 +595,42 @@ section.mainSection ul.faqList li .faqAnswer p{
 /* Contact us styles */
 
 h1.sectionHeader .btnContainer{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: inline-block;
 }
 
 h1.sectionHeader a{
-    padding: 8px;
+    padding: 8px 16px;
+    min-width: 160px;
     position: relative;
-    background-color: rebeccapurple;
+    font-weight: lighter;
+    /* background-color: rebeccapurple; */
+    border: 2px solid rgba(245, 222, 179, 0.8);
+    background-color: rgba(102, 51, 153, 0.3);
     z-index: 1;
     display: inline-block;
     -webkit-transform: skewX(-10deg);
     -moz-transform: skewX(-10deg);
     -ms-transform: skewX(-10deg);
     transform: skewX(-10deg);
+    opacity: .8;
+    transition: background-color .5s;
+}
+
+h1.sectionHeader a:hover{
+    cursor: pointer;
+    background-color: rgba(102, 51, 153, 0.7);
+}
+
+h1.sectionHeader a:hover + a{
+    background-color: rgba(102, 51, 153, 0.3);
+}
+
+h1.sectionHeader a.btnSelected{
+    border: 2px solid rgb(245, 222, 179) !important;
+    background-color: rgba(102, 51, 153, 0.7);
+    font-weight: bold;
+    opacity: 1;
 }
 
 /*
@@ -628,46 +650,107 @@ h1.sectionHeader a:first-child:after{
 }
 */
 
-h1.sectionHeader a#quote_btn{
-    padding-left: 35px;
-    z-index: 0;
+h1.sectionHeader a#contact_btn{
+    border-right: none;
 }
 
-#contact_us form{
+h1.sectionHeader a#quote_btn{
+    border-left: none;
+    /*
+    padding-left: 35px;
+    z-index: 0;
+    */
+}
+
+#contact_form{
     margin: 0px auto;
     max-width: 800px;
     font-size: 20px;
 }
 
-#contact_us form fieldset{
+#contact_form  > fieldset{
+    padding: 8px 0px;
     display: inline-block;
     text-align: left;
     border: none;
 }
 
-#contact_us form .fieldRow{
-    padding: 8px 0px;
+#contact_form  > fieldset #quote_form{
+    margin: 8px auto;
+    padding: 0px 0px 16px 0px;
+    border: none;
+    border-top: 1px solid rgba(245, 222, 179, 0.5);
+    border-bottom: 1px solid rgba(245, 222, 179, 0.5);
 }
 
-#contact_us form .fieldRow label{
+#contact_form  > fieldset #quote_form .fieldRow{
+    max-height: 300px;
+    transition: max-height 1s;
+}
+
+#contact_form  > fieldset #quote_form.formDisabled{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+#contact_form  > fieldset #quote_form.formDisabled .fieldRow{
+    padding: 0px;
+    border: none;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+#contact_form  .fieldRow{
+    padding: 8px 0px;
+    position: relative;
+}
+
+#contact_form  .fieldRow label{
     display: inline-block;
     min-width: 125px;
     text-align: left;
 }
 
-#contact_us form .fieldRow input, #contact_us form .fieldRow textarea{
-    border: 1px solid rgba(0,0,0, .8);
-    background-color: rgba(0, 0, 0, 0.2);
+#contact_form  .fieldRow input, #contact_form  .fieldRow textarea, #contact_form  .fieldRow select{
+    border: 2px outset rgba(245, 222, 179, 0.5);
+    background-color: #192649;
     font-size: 20px;
     color: wheat;
 }
 
-#contact_us form .fieldRow textarea{
+#contact_form  .fieldRow.quoteFields label{
+    margin-top: 16px;
+}
+
+#contact_form  .fieldRow.quoteFields select{
+    margin-top: 16px;
+    position: absolute;
+    right: 0px;
+}
+
+#contact_form  .fieldRow textarea{
     margin-top: 10px;
-    width: 100%;
+    width: 100%;                    /* Default 
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;          /* Will ignore if not supported */
     resize: none;
 }
 
+#contact_form  fieldset button{
+    margin: 8px auto 0px auto;
+    padding: 5px 8px;
+    display: block;
+    font-size: 18px;
+    background-color: rgba(102, 51, 153, 0.3);
+    color: wheat;
+    border: 2px outset rgba(245, 222, 179, 0.5);
+}
+
+#contact_form  fieldset button i{
+    margin-left: 10px;
+}
 /* Footer Styles */
 
 footer{
