@@ -3,14 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
-.mobileShow{
-    display: none !important;
-}
-
-.tabletShow{
-    display: none !important;
-}
-
 @keyframes jiggle {
     0% {transform: translateY(-2px);}
     50% {transform: translateY(2px);}
@@ -23,6 +15,19 @@
     100% {transform: translateY(-1px);}
 }
 
+.mobileShow{
+    display: none !important;
+}
+
+.tabletShow{
+    display: none !important;
+}
+
+.jiggleClass{
+    animation-name: jiggle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
 /* Body and header styles */
 
 body{
@@ -117,7 +122,7 @@ header nav a.navBtn:hover{
 /* Main Section Styles */
 
 section{
-    background-color: rgba(0, 0, 0, .2);
+    background-color: #141e3a;
     padding: 15px 5px;
     margin: 0px;
     color: wheat;
@@ -208,6 +213,7 @@ section.splitSection{
     padding: 0px 15px;
     display: inline-block;
     color: #3bfd0077;
+    text-decoration: underlines;
 }
 
 .splitLeft .bottomText a.locationLink:hover i{
@@ -371,19 +377,107 @@ h1.sectionHeader span{
     opacity: 0;
 }
 
+/* Cases and accessories section */
+
 #cases{
-    
+    max-width: 1200px;
+    margin: 0px auto 0px auto;
 }
 
 #cases h3{
-    margin: 10px auto;
+    margin: 10px auto 15px auto;
     padding: 10px;
     background-color: #192649;
     max-width: 945px;
 }
 
+#cases h3:hover{
+    cursor: pointer;
+}
+
+/*#cases h3:hover + div.caseShowcase.showcaseSlide{
+    padding-bottom: 25px;
+    max-height: 800px;
+}*/
+
 #cases h3 i{
     margin-left: 10px;
+}
+
+#cases div.caseShowcase{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 25px;
+    max-height: 800px;
+    transition: max-height 1s ease, padding-bottom 1s ease;
+}
+
+#cases div.caseShowcase.showcaseSlide{
+    max-height: 0px;
+    padding-bottom: 0px;
+}
+
+#cases div.caseShowcase .casePic{
+    margin: 0px 10px;
+    min-height: 400px;
+    min-width: 250px;
+    height: 400px;
+    width: 250px;
+    background-color: rgba(251, 127, 255, 0.562);
+    border-radius: 10px;
+}
+
+#cases div.caseShowcase .casePic img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+#cases div.caseShowcase .picShade{
+    position: absolute;
+    height: 100%;                    /* Default */
+    height: -moz-available;          /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    height: fill-available;          /* Will ignore if not supported */
+    width: 20%;
+}
+
+#cases div.caseShowcase .picShade i{
+    position: relative;
+    top: 50%;
+    font-size: 44px;
+    margin-top: -84px;
+    padding: 40px;
+}
+
+#cases div.caseShowcase .picShade i:hover{
+    cursor: pointer;
+    color: #3bfd0077;
+    transition: color .5s;
+}
+
+#cases div.caseShowcase .picShade.left{
+    left: 0px;
+    text-align: left;
+    background-image: linear-gradient(
+        90deg, 
+        #141e3a, 
+        transparent 90%
+    );
+}
+
+#cases div.caseShowcase .picShade.right{
+    right: 0px;
+    text-align: right;
+    background: linear-gradient(
+        90deg, 
+        transparent 5%,
+        #141e3a85 40%,
+        #141e3a 100%
+    );
 }
 
 /* Recent Projects secion */
@@ -406,10 +500,25 @@ div#recentProjects .imgWrapper{
     flex: 1 1 40%;
     text-align: left;
     flex-wrap: wrap;
+    position: relative;
 }
 
 div#recentProjects .imgWrapper:first-child{
     margin-left: 0px;
+}
+
+div#recentProjects .imgWrapper i{
+    position: absolute;
+    left: 0px;
+    bottom: 40px;
+    font-size: 32px;
+    /*transform: rotate(45deg);*/
+    opacity: .8;
+}
+
+div#recentProjects .imgWrapper i:hover{
+    cursor: pointer;
+    color: #3bfd0077;
 }
 
 div#recentProjects .projectImages{
@@ -479,6 +588,7 @@ div#recentProjects .projectDescription .tikTokRef{
     padding: 5px;
     font-size: 20px;
     text-decoration: underline;
+    width: max-content;
 }
 
 div#recentProjects .projectDescription .tikTokRef:hover{
@@ -668,14 +778,14 @@ h1.sectionHeader a#quote_btn{
     font-size: 20px;
 }
 
-#contact_form  > fieldset{
+#contact_form > fieldset{
     padding: 8px 0px;
     display: inline-block;
     text-align: left;
     border: none;
 }
 
-#contact_form  > fieldset #quote_form{
+#contact_form > fieldset #quote_form{
     margin: 8px auto;
     padding: 0px 0px 16px 0px;
     border: none;
@@ -683,62 +793,62 @@ h1.sectionHeader a#quote_btn{
     border-bottom: 1px solid rgba(245, 222, 179, 0.5);
 }
 
-#contact_form  > fieldset #quote_form .fieldRow{
+#contact_form > fieldset #quote_form .fieldRow{
     max-height: 300px;
-    transition: max-height 1s;
+    transition: max-height .4s, padding .5s, margin .5s;
 }
 
-#contact_form  > fieldset #quote_form.formDisabled{
+#contact_form > fieldset #quote_form.formDisabled{
     margin: 0px;
     padding: 0px;
     border: none;
 }
 
-#contact_form  > fieldset #quote_form.formDisabled .fieldRow{
+#contact_form > fieldset #quote_form.formDisabled .fieldRow{
     padding: 0px;
     border: none;
     max-height: 0px;
     overflow: hidden;
 }
 
-#contact_form  .fieldRow{
+#contact_form .fieldRow{
     padding: 8px 0px;
     position: relative;
 }
 
-#contact_form  .fieldRow label{
+#contact_form .fieldRow label{
     display: inline-block;
     min-width: 125px;
     text-align: left;
 }
 
-#contact_form  .fieldRow input, #contact_form  .fieldRow textarea, #contact_form  .fieldRow select{
+#contact_form .fieldRow input, #contact_form .fieldRow textarea, #contact_form .fieldRow select{
     border: 2px outset rgba(245, 222, 179, 0.5);
     background-color: #192649;
     font-size: 20px;
     color: wheat;
 }
 
-#contact_form  .fieldRow.quoteFields label{
+#contact_form .fieldRow.quoteFields label{
     margin-top: 16px;
 }
 
-#contact_form  .fieldRow.quoteFields select{
+#contact_form .fieldRow.quoteFields select{
     margin-top: 16px;
     position: absolute;
     right: 0px;
 }
 
-#contact_form  .fieldRow textarea{
+#contact_form .fieldRow textarea{
     margin-top: 10px;
-    width: 100%;                    /* Default 
+    width: 100%;                    /* Default */
     width: -moz-available;          /* WebKit-based browsers will ignore this. */
     width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
     width: fill-available;          /* Will ignore if not supported */
     resize: none;
 }
 
-#contact_form  fieldset button{
+#contact_form fieldset button{
     margin: 8px auto 0px auto;
     padding: 5px 8px;
     display: block;
@@ -748,7 +858,7 @@ h1.sectionHeader a#quote_btn{
     border: 2px outset rgba(245, 222, 179, 0.5);
 }
 
-#contact_form  fieldset button i{
+#contact_form fieldset button i{
     margin-left: 10px;
 }
 /* Footer Styles */

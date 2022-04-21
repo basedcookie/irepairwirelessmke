@@ -14,12 +14,18 @@ const mobileSlideHide = (e, className) => {
     e.parentElement.classList.toggle("mobileSlideHide");
 }
 
+const siblingSlide = (e, className) => {
+    /*e.firstElementChild.classList.toggle("jiggleClass");*/
+    e.nextElementSibling.classList.toggle("showcaseSlide");
+}
+
 const toggleForm = (e, formToggle) => {
     if(e.classList.contains('btnSelected')) return false;
 
     let btnToggle = {'contact': 'quote_btn', 'quote': 'contact_btn'};
+    document.getElementById(formToggle+'_btn').classList.toggle('btnSelected');
     document.getElementById(btnToggle[formToggle]).classList.toggle('btnSelected');
-    e.classList.toggle('btnSelected');
+    /*e.classList.toggle('btnSelected');*/
 
     let quoteFields = document.getElementById('quote_form');
     quoteFields.classList.toggle('formDisabled');
@@ -28,4 +34,8 @@ const toggleForm = (e, formToggle) => {
     } else{
         quoteFields.disabled = true;
     }
+}
+
+const showCaseScroll = (e, direction) => {
+    /* Move all items to the left or right then stop after a certain amount and restart? */
 }

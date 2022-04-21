@@ -94,10 +94,6 @@ header nav a.quoteBtn{
     margin-top: 0px;
 }
 
-header nav a.quoteBtn i{
-    /*margin-right: 10px;*/
-}
-
 header nav a.menuToggle{
     opacity: 0;
     transition: .5s opacity;
@@ -220,7 +216,7 @@ h1.sectionHeader a{
     font-size: 22px;
 }
 
-#contact_form  .fieldRow.quoteFields select{
+#contact_form .fieldRow.quoteFields select{
     position: initial;
     display: block;
 }

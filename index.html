@@ -32,11 +32,11 @@
             <div id="navMenu" class="mobileWrap">
                 <a onclick="toggleMobileMenu('menuToggle')" class="mobileMenu" href="#"><i class="fa-solid fa-bars"></i>Menu</a>
                 <a class="navItem menuToggle" href="#our_services">Our Services</a>
-                <a class="navItem menuToggle navLast" href="#">Cases & Accessories</a>
+                <a class="navItem menuToggle navLast" href="#cases_link">Cases & Accessories</a>
             </div>
             <div class="mobileWrap navRight">
                 <a class="navBtn" href="#contact_us">Contact<i class="fa-solid fa-phone"></i></a>
-                <a class="navBtn quoteBtn menuToggle" href="#"><span class="quoteLong">Get a </span>Quote<i class="fa-solid fa-calculator"></i></a>    
+                <a class="navBtn quoteBtn menuToggle" href="#contact_us" onclick="toggleForm(this, 'quote')"><span class="quoteLong">Get a </span>Quote<i class="fa-solid fa-calculator"></i></a>    
             </div>
         </nav>
     </header>
@@ -112,18 +112,42 @@
                 </div>
             </div>
         </div>
-        <div class="servicesImg mobileHide">
+        <div id="cases_link" class="servicesImg mobileHide">
             <h2>Where the magic happens!</h2>
             <img alt="Repair Bench Picture">
         </div>
-        <div id="cases" class="cases_accessories">
-            <h3>Check out our phone cases and accessories<i class="fa-solid fa-angle-down"></i></h2>
+        <div id="cases">
+            <h3 onclick="siblingSlide(this)">Check out our phone cases and accessories<i class="fa-solid fa-angle-down jiggleClass"></i></h2>
+            <div class="caseShowcase">
+                <div class="casePic">
+                    <img src="" alt="">
+                </div>
+                <div class="casePic">
+                    <img src="" alt="">
+                </div>
+                <div class="casePic">
+                    <img src="" alt="">
+                </div>
+                <div class="casePic">
+                    <img src="" alt="">
+                </div>
+                <div class="casePic">
+                    <img src="" alt="">
+                </div>
+                <div class="picShade left">
+                    <i onclick="showCaseScroll(this,'left')" class="fa-solid fa-angles-left"></i>
+                </div>
+                <div class="picShade right">
+                    <i class="fa-solid fa-angles-right"></i>
+                </div>
+            </div>
         </div>
     </section>
     <h1 class="sectionHeader"><span style="margin-right: 15px;"></span>Recently Repaired<span style="margin-left: 15px;"></span></h1>
     <section class="mainSection">
         <div id="recentProjects">
             <div class="imgWrapper">
+                <i class="fa-solid fa-images"></i>
                 <div class="projectImages">
                     <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic3_scale.jpg'); background-size: cover;" class="bottomImg">
                     <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic2_scale.jpg'); background-size: cover;" class="midImg">
