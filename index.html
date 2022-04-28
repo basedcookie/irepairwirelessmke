@@ -146,18 +146,31 @@
     <h1 class="sectionHeader"><span style="margin-right: 15px;"></span>Recently Repaired<span style="margin-left: 15px;"></span></h1>
     <section class="mainSection">
         <div id="recentProjects">
-            <div class="imgWrapper">
+            <!--<div class="imgWrapper">
                 <i class="fa-solid fa-images"></i>
                 <div class="projectImages">
                     <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic3_scale.jpg'); background-size: cover;" class="bottomImg">
                     <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic2_scale.jpg'); background-size: cover;" class="midImg">
                     <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic1_scale.jpg'); background-size: cover; background-position: 48%;" class="topImg">
                 </div>
+            </div>!-->
+            <div class="imgWrapper">
+                <div class="projectImages">
+                    <img src="assets/site_images/1x1.png" style="background-image: url('assets/site_images/pic1_scale.jpg');" class="topImg">
+                </div>
             </div>
             <div class="projectDescription">
+                <div class="projectNav">
+                    <div>
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                        <p>Next image</p>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                    <a>Next Project</a>
+                </div>
                 <h2><span>Device:</span>Moto G Phone</h2>
                 <h2><span>Issue:</span>Screen got damaged</h2>
-                <h2><span>Repair:</span>Replaced the cracked screen with a new one and tested it</h2>
+                <!-- <h2><span>Repair:</span>Replaced the cracked screen with a new one and tested it</h2>!-->
                 <p>To see more repairs check us out on Tiktok</p>
                 <a href="https://www.tiktok.com/@irepairwireless" class="tikTokRef"><i class="fa-brands fa-tiktok"></i>iRepairWirelessMKE</a>
                 <div id="recentReviews">
@@ -167,9 +180,6 @@
                     </div>
                 </div>
             </div>
-            <!--<div class="projectDesc">
-                <p>Customer came in with a broken HDMI port on their Ps5. The port was replaced and we got a happy customer</p>
-            </div>!-->
         </div>
     </section>
     <h1 id="faqs" class="sectionHeader sh_faqs"><span style="margin-right: 15px;"></span>FAQs<span style="margin-left: 15px;"></span><p class="miniTitle">(Frequently Asked Questions)</p></h1>
@@ -209,7 +219,7 @@
     </section>
     <h1 id="contact_us" class="sectionHeader"><div class="btnContainer"><a class="btnSelected" id="contact_btn" onclick="toggleForm(this, 'contact')">Contact</a><a id="quote_btn" onclick="toggleForm(this, 'quote')">Quote</a></div></h1>
     <section class="mainSection">
-        <form id="contact_form">
+        <form id="contact_form" action="https://formspree.io/f/mwkyrblq" method="POST">
             <fieldset>
                 <div class="fieldRow">
                     <label for="fName">Full Name</label>
@@ -217,7 +227,7 @@
                 </div>
                 <div class="fieldRow">
                     <label for="email">Email</label>
-                    <input name="email" type="email">
+                    <input name="_replyto" type="email">
                 </div>
                 <div class="fieldRow">
                     <label for="phone">Phone #</label>
@@ -265,11 +275,11 @@
                     </div>
                 </fieldset>
                 <div class="fieldRow">
-                    <label for="comments">Comments</label>
+                    <label for="message">Comments</label>
                     <br>
-                    <textarea name="comments" rows="5" placeholder="Questions, comments, concerns..."></textarea>
+                    <textarea name="message" rows="5" placeholder="Questions, comments, concerns..."></textarea>
                 </div>
-                <button>Submit<i class="fa-solid fa-angle-right"></i></button>
+                <button type="submit">Submit<i class="fa-solid fa-angle-right"></i></button>
             </fieldset>
         </form>
     </section>
