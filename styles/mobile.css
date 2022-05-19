@@ -163,10 +163,6 @@ div#recentProjects .projectImages{
     width: 98%;
 }
 
-div#recentProjects .projectImages img.midImg, div#recentProjects .projectImages img.topImg{
-    left: 0px;
-}
-
 div#recentProjects .projectDescription h2 {
     font-size: 20px;
 }

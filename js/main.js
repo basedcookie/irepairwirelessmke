@@ -36,6 +36,36 @@ const toggleForm = (e, formToggle) => {
     }
 }
 
-const showCaseScroll = (e, direction) => {
-    /* Move all items to the left or right then stop after a certain amount and restart? */
+/* Code for the showcase */
+let showcase = {
+    position: 1,
+    max: 3,
+    firstImg: document.getElementById('img_1'),
+    create: () => {
+        console.log("showcase created");
+        document.getElementById('showcase_left').onclick = function() {
+            showcase.scroll('left');
+        }
+        document.getElementById('showcase_right').onclick = function() {
+            showcase.scroll('right');
+        }
+    },
+    scroll: (direction) => {
+        var p = showcase.position;
+        if ((direction == 'left' && p == 1) || (direction == 'right' && p == showcase.max)) return false;
+        
+        if (direction == 'right') {
+            console.log('slide_'+p);
+            document.getElementById('img_1').classList.toggle('slide_'+p);
+            showcase.position++;
+        } else{
+            console.log('slide_'+(p-1));
+            document.getElementById('img_1').classList.toggle('slide_'+(p-1));
+            showcase.position--;
+        }
+    }
+}
+
+window.onload = function () {
+    showcase.create();
 }
