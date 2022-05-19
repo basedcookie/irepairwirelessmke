@@ -440,12 +440,21 @@ h1.sectionHeader span{
     width: 250px;
     background-color: rgba(251, 127, 255, 0.562);
     border-radius: 10px;
+    position: relative;
+    transition: left 2s;
+    -moz-transition:  left 2s; /* Firefox 4 */
+    -webkit-transition: left 2s; /* Safari and Chrome */
+    -o-transition: left 2s; /* Opera */
 }
 
 #cases div.caseShowcase .casePic img{
     width: 100%;
     height: 100%;
     border: 1px solid black;
+}
+
+#cases div.caseShowcase .casePic.case_slide1{
+    left: -250px;
 }
 
 #cases div.caseShowcase .picShade{
